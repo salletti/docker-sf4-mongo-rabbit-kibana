@@ -28,8 +28,8 @@ Here are the docker-compose built images:
 
 ```bash
 $ docker-compose exec php sh
-$ composer self-update
-$ composer install
+# composer self-update
+# composer install
 ```
 Go to: http://sf.localtest.me/post/list
 
