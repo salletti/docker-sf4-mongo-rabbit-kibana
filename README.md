@@ -7,7 +7,9 @@ This is a complete stack for running Symfony 4 (latest version: Flex) into Docke
 
 # Installation
 
-First, clone the repository: ```bash
+First, clone the repository: 
+
+```bash
 $ git clone https://github.com/salletti/docker-sf4-mongo-rabbit-kibana.git
 ```
 
