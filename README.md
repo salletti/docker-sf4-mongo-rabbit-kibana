@@ -1,4 +1,4 @@
-docker-symfony
+docker-sf4-mongo-rabbit-kibana
 ==============
 
 This is a fork of project: https://github.com/eko/docker-symfony
@@ -26,5 +26,10 @@ Here are the docker-compose built images:
 * queue: This is the rabbitMQ container (access: http://localhost:15672/#/)
 
 
-
+```bash
+$ docker-compose exec php sh
+$ composer self-update
+$ composer install
+```
+Go to: http://sf.localtest.me/post/list
 
