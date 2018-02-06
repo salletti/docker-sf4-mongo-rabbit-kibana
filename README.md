@@ -9,6 +9,9 @@ This is a complete stack for running Symfony 4 (latest version: Flex) into Docke
 
 First, clone this repository: https://github.com/salletti/docker-sf4-mongo-rabbit-kibana.git
 
+```bash
+$ docker-compose build
+```
 Here are the docker-compose built images:
 
 * db: This is the MySQL database container (can be changed to postgresql or whatever in docker-compose.yml file),
