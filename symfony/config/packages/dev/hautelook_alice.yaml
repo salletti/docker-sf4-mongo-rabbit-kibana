@@ -1,0 +1,5 @@
+# Read the documentation: https://github.com/hautelook/AliceBundle/blob/v1.4.1/README.md
+fidry_alice_data_fixtures:
+    default_purge_mode: "delete"
+    db_drivers:
+            doctrine_orm: ~

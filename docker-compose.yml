@@ -5,10 +5,8 @@ services:
         ports:
             - "3306:3306"
         environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: symfony
-            MYSQL_USER: symfony
-            MYSQL_PASSWORD: symfony
+          MYSQL_ALLOW_EMPTY_PASSWORD: 1
+          MYSQL_DATABASE: symfony
     php:
         build: ./php-fpm
         ports:
@@ -28,6 +26,7 @@ services:
             - php
         volumes:
             - ./logs/nginx/:/var/log/nginx:cached
+            - ./nginx/symfony.conf:/etc/nginx/conf.d/symfony.conf
     elk:
         image: willdurand/elk
         ports:
@@ -38,3 +37,19 @@ services:
         volumes_from:
             - php
             - nginx
+    queue:
+      image: rabbitmq:3.6-management-alpine
+      environment:
+        RABBITMQ_DEFAULT_USER: symfony
+        RABBITMQ_DEFAULT_PASS: symfony
+      ports:
+        - 15672:15672
+
+    mongodb:
+      image: mongo
+      restart: always
+      volumes:
+        - ./data/db/mongo:/data/db
+      ports:
+                - "27020:27017"
+      command: --storageEngine wiredTiger
