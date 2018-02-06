@@ -7,7 +7,9 @@ This is a complete stack for running Symfony 4 (latest version: Flex) into Docke
 
 # Installation
 
-First, clone this repository: https://github.com/salletti/docker-sf4-mongo-rabbit-kibana.git
+First, clone the repository: ```bash
+$ git clone https://github.com/salletti/docker-sf4-mongo-rabbit-kibana.git
+```
 
 ```bash
 $ docker-compose build
@@ -22,7 +24,5 @@ Here are the docker-compose built images:
 * queue: This is the rabbitMQ container (access: http://localhost:15672/#/)
 
 
-```bash
-$ git clone https://github.com/salletti/docker-sf4-mongo-rabbit-kibana.git
-```
+
 
