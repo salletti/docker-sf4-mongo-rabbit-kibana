@@ -24,6 +24,7 @@ Here are the docker-compose built images:
 * elk: This is a ELK stack container which uses Logstash to collect logs, send them into Elasticsearch and visualize them with Kibana.
 * mongodb: This is the mongoDB container 
 * queue: This is the rabbitMQ container (access: http://localhost:15672/#/)
+* elasticsearch: This is the Elasticsearch container 
 
 
 ```bash
